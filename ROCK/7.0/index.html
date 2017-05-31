@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>ROCK.js 7.0</title>		
+	</head>
+	<body>
+		<div><a href="#home">#home</a></div>
+		<div><a href="#teamSelect/elitePlayer">#teamSelect/elitePlayer</a></div>
+		<div><a href="#teamSelect/normalPlayer">#teamSelect/normalPlayer</a></div>
+		<div><a href="#player/32">#player/32</a></div>
+		<div><a href="#leagues">#leagues</a></div>
+		<div><a href="#leagues/create">#leagues/create</a></div>
+		<div><a href="#leagues/join">#leagues/join</a></div>
+		<div><a href="#leagues/3017">#leagues/3017</a></div>
+		<div><a href="#leagues/3017/1223">#leagues/3017/1223</a></div>
+		<div><a href="#leagues/3017/1223/7635">#leagues/3017/1223/7635</a></div>
+		<div><a href="#scores">#scores</a></div>
+		<script src="http://js.jamesrock.me/ROCK-7.0.js"></script>
+		<script src="/ROCK.MVC.js"></script>
+		<script>
+
+			console.log("ROCK.MVC", ROCK.MVC);
+
+			var
+			routes = {
+				routes: {
+					"": "home",
+					"home": "home",
+					"player/:id": "player",
+					"teamSelect/elitePlayer": "teamSelectElitePlayer",
+					"teamSelect/normalPlayer": "teamSelectNormalPlayer",
+					"teamSelect/powerPlay": "teamSelectPowerPlay",
+					"teamSelect/goldenGoal": "teamSelectGoldenGoal",
+					"leagues": "leagues",
+					"leagues/create": "leagueCreate",
+					"leagues/join": "leagueJoin",
+					"leagues/:id": "league1",
+					"leagues/:id/:name": "league2",
+					"leagues/:id/:name/:size": "league3",
+					"leaderboards": "leaderboards",
+					"leaderboards/create": "leaderboardsCreate",
+					"leaderboards/join": "leaderboardsJoin",
+					"leaderboards/:id": "leaderboards"
+				},
+				home: function() {
+
+					console.log("home");
+					
+				},
+				teamSelectElitePlayer: function() {
+
+					console.log("teamSelectElitePlayer");
+					
+				},
+				teamSelectNormalPlayer: function() {
+
+					console.log("teamSelectNormalPlayer");
+					
+				},
+				teamSelectPowerPlay: function() {
+
+					console.log("teamSelectPowerPlay");
+					
+				},
+				teamSelectGoldenGoal: function() {
+
+					console.log("teamSelectGoldenGoal");
+				
+				},
+				leagues: function() {
+
+					console.log("leagues");
+					
+				},
+				league: function(id) {
+
+					console.log("league", id);
+					
+				},
+				league1: function(id) {
+
+					console.log("league1", id);
+					
+				},
+				league2: function(id, name) {
+
+					console.log("league2", name);
+					
+				},
+				league3: function(id, name, value) {
+
+					console.log("league3", value);
+					
+				},
+				player: function(id) {
+
+					console.log("player", id);
+					
+				},
+				leagueCreate: function() {
+
+					console.log("leagueCreate");
+					
+				},
+				leagueJoin: function() {
+
+					console.log("leagueJoin");
+					
+				}
+			},
+			ExampleRouter = ROCK.MVC.Router.extend(routes),
+			exampleRouter = new ExampleRouter();
+
+			exampleRouter.start();
+
+			console.log("exampleRouter", exampleRouter);
+
+		</script>
+	</body>
+</html>
