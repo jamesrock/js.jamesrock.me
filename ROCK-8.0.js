@@ -267,8 +267,8 @@
 
 })();
 (function() {
-	
-	var 
+
+	var
 	second = 1000,
 	minute = (second*60),
 	hour = (minute*60),
@@ -315,7 +315,7 @@
 
 		},
 		reverse: function(dateString) {
-			
+
 			return dateString.split("/").reverse().join("");
 
 		},
@@ -330,7 +330,7 @@
 
 		},
 		toString: function(date, format) {
-		
+
 			var
 			day = date.getDate(),
 			month = (date.getMonth()+1),
@@ -358,6 +358,11 @@
 			_date.setTime(time);
 
 			return _date;
+
+		},
+		toNumber: function(dateString) {
+
+			return Number(dateString.split("/").reverse().join(""));
 
 		},
 		FORMAT: {
