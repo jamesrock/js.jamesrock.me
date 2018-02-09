@@ -24,6 +24,7 @@ copy(buildCatString([
 	"SORT",
 	"TIME",
 	"HTTP",
+	"STRING",
 	"JQUERY",
 	"LocalStorage"
 ], "8.0"));
