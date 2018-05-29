@@ -78,6 +78,11 @@
 
 			return collection[collection.length-1];
 
+		},
+		sort: function(collection, method) {
+
+			return collection.sort(ROCK.SORT[method]);
+
 		}
 	};
 

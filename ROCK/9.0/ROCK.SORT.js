@@ -42,7 +42,7 @@
 			};
 		},
 		SHUFFLE: function(prop) {
-			return function(a, b) {
+			return function() {
 				return ROCK.MATH.random(-1, 1);
 			};
 		}
