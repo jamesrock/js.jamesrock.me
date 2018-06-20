@@ -38,7 +38,7 @@
 		getDays: function(time) {
 			return ROCK.MATH.truncate(time/day);
 		},
-		getYears: function() {
+		getYears: function(time) {
 			return ROCK.MATH.truncate(time/year);
 		},
 		getMillisecondsInDay: function(time) {
