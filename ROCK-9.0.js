@@ -267,6 +267,11 @@
 
 			return collection.sort(ROCK.SORT[method]);
 
+		},
+		shuffle: function(collection) {
+
+			return this.sort(collection, 'SHUFFLE');
+
 		}
 	};
 
