@@ -41,7 +41,7 @@
 				};
 			};
 		},
-		SHUFFLE: function(prop) {
+		SHUFFLE: function() {
 			return function() {
 				return ROCK.MATH.random(-1, 1);
 			};
