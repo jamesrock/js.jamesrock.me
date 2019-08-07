@@ -26,18 +26,23 @@ export default function countdown() {
 
       var
       now = new Date(),
-      then = new Date(countdownTo),
       diff = (then-now),
       days = time.getDays(diff),
       hours = time.getHoursOf(diff),
       minutes = time.getMinutesOf(diff),
       seconds = time.getSecondsOf(diff);
 
+      if(diff<0) {
+        return;
+      };
+
       $this.html([toDouble(days), toDouble(hours), toDouble(minutes), toDouble(seconds)].join(':'));
 
       requestAnimationFrame(render);
 
     };
+
+    console.log('then', then);
 
     requestAnimationFrame(render);
 
