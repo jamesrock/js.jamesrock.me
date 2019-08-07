@@ -42,7 +42,7 @@ export default function countdown() {
 
     };
 
-    console.log('then', then);
+    console.log(then);
 
     requestAnimationFrame(render);
 
