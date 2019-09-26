@@ -32,16 +32,13 @@ $.fn.tabs2 = function(options) {
 				panel.attr('data-open', open);
 				handler.attr('data-open', open);
 
-			}).on('toggle', function() {
-
-				open = !open;
-				panel.attr('data-open', open);
-				handler.attr('data-open', open);
-
 			}),
-			panel = $(hhandler.attr(settings.attr));
+			selector = handler.attr(settings.attr),
+			panel = $(selector);
 
-		}).trigger('close').first().trigger('open');
+		});
+
+		handlers.trigger('close').first().trigger('open');
 
 	});
 
